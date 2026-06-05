@@ -1,10 +1,9 @@
 import Link from 'next/link';
-import PageHeader from '@/components/PageHeader';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Separator } from '@/components/ui/separator';
 import { ImageWithFallback } from '@/components/ui/image-with-fallback';
-import { Check, CheckCheck, CheckCircle, ChevronLeft, ChevronRight, ClockAlert } from 'lucide-react';
-import Image from 'next/image';
+import { CheckCheck, CheckCircle, ChevronLeft, ClockAlert } from 'lucide-react';
 import { certificateData } from '@/lib/data/certificate.data';
 import { Button } from '@/components/ui/button';
 
@@ -52,8 +51,8 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
               />
             </div>
 
-            <div className="flex-row items-center justify-items-center border p-4 my-6 rounded-sm bg-white">
-              <div className="w-full text-center py-2.5 text-white font-bold text-2xl bg-main rounded-md">PT. SINERGI SINAR ABADI</div>
+            <div className="flex-row items-center justify-items-center border p-4 lg:p-8 my-6 rounded-sm bg-white">
+              <div className="w-full text-center font-bold text-xl lg:text-3xl py-2.5 text-white bg-main rounded-md">PT. SINERGI SINAR ABADI</div>
               <div className="grid md:grid-cols-3 gap-4 w-full justify-items-center py-4 px-2">
                 <div className="text-center text-sm space-y-1.5">
                   <h1>Scope of Certification :</h1>
@@ -70,9 +69,9 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
               </div>
             </div>
 
-            <div className="flex-row items-center justify-items-center border p-4 rounded-sm bg-white my-8">
+            <div className="flex-row items-center justify-items-center border p-4 lg:p-8 rounded-sm bg-white my-8">
               <div className="w-full">
-                <div className="text-center py-1.5 text-white font-bold text-base bg-main rounded-md mb-4">FIRST SURVEILLANCE</div>
+                <div className="text-center py-1.5 text-white font-bold text-sm lg:text-base bg-main rounded-md mb-4">FIRST SURVEILLANCE</div>
                 <div className="grid md:grid-cols-2 justify-center mx-auto items-center">
                   <div className="text-sm h-[48px] bg-main items-center text-white border flex pl-4">
                     <p className="text-sm">Diterbitkan Tanggal</p>
@@ -90,9 +89,9 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
               </div>
             </div>
 
-            <div className="flex-row items-center justify-items-center border p-4 rounded-sm bg-white">
+            <div className="flex-row items-center justify-items-center border p-4 lg:p-8 rounded-sm bg-white">
               <div className="w-full">
-                <div className="text-center py-1.5 text-white font-bold text-base bg-main rounded-md mb-4">CERTIFICATE STATUS</div>
+                <div className="text-center py-1.5 text-white font-bold text-sm lg:text-base bg-main rounded-md mb-4">CERTIFICATE STATUS</div>
                 <div className="grid md:grid-cols-4 justify-center gap-4 mx-auto border items-center">
                   <div className="text-sm h-[48px] bg-main items-center text-white flex pl-4">
                     <p className="text-sm">Certified Since</p>
@@ -130,7 +129,7 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
               </div>
 
               <div className="w-full mt-8">
-                <div className=" text-center py-1.5 text-white font-bold text-base bg-main rounded-md mb-4">SURVEILLANCE STATUS</div>
+                <div className=" text-center py-1.5 text-white font-bold text-sm lg:text-base bg-main rounded-md mb-4">SURVEILLANCE STATUS</div>
                 <div className="grid md:grid-cols-4 gap-4 w-full border items-center">
                   <div className="text-sm space-y-1.5 h-[48px] bg-main items-center text-white flex pl-4">
                     <p className="text-sm">First Surveillance</p>
@@ -172,9 +171,15 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
                 </div>
               </div>
             </div>
+            <div className="flex-row py-6 justify-items-center">
+              <Link href="/validate-certificate" className="flex items-center text-sm text-muted-foreground hover:underline transition">
+                <ChevronLeft className="h-4 w-4 mr-1" />
+                Back to home
+              </Link>
+            </div>
           </div>
 
-          <Separator className="my-20" />
+          <Separator className="mb-20" />
         </div>
       </section>
     </div>
