@@ -4,10 +4,9 @@ import * as React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Autoplay from 'embla-carousel-autoplay';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-
-import { informasiData } from '@/lib/data/informasi.data';
 import { ChevronRight } from 'lucide-react';
+import { informasiData } from '@/lib/data/informasi.data';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 export function InformasiCarousel() {
   const plugin = React.useRef(Autoplay({ delay: 3500, stopOnInteraction: true }));

@@ -1,7 +1,7 @@
 import CallToAction from '@/components/CallToActions';
-import { CheckCertificateFields } from '@/components/CheckCertificate';
-import Features from '@/components/FeatureFirst';
 import FeaturesTwo from '@/components/FeatureSecond';
+import OurServices from '@/components/OurServices';
+import { CheckCertificateFields } from '@/components/CheckCertificate';
 import { HeroCarousel } from '@/components/HeroCarousel';
 import { InformasiCarousel } from '@/components/InformasiCarousel';
 
@@ -10,8 +10,8 @@ export default function Home() {
     <>
       <HeroCarousel />
       <CheckCertificateFields />
-      <Features />
       <FeaturesTwo />
+      <OurServices />
       <InformasiCarousel />
       <CallToAction />
     </>

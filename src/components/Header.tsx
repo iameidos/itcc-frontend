@@ -32,7 +32,7 @@ export default function HeroHeader() {
         className={cn('fixed top-0 z-50 w-full bg-linear-to-r from-gray-100 to-gray-50 border-b transition-colors duration-150', scrolled && 'bg-background/20 backdrop-blur-3xl')}
       >
         <div className="mx-auto max-w-5xl px-6 transition-all duration-300">
-          <div className="relative flex flex-wrap items-center justify-between gap-6 py-2 lg:gap-0 lg:py-4">
+          <div className="relative flex flex-wrap items-center justify-between gap-6 py-2 lg:gap-0 lg:py-2.5">
             <div className="flex w-full items-center justify-between gap-12 lg:w-auto">
               {/* LOGO */}
               <Link href="/" aria-label="go home" className="mx-auto block size-fit text-muted">
@@ -52,7 +52,7 @@ export default function HeroHeader() {
 
               {/* DESKTOP MENU */}
               <div className="hidden lg:block">
-                <ul className="flex gap-8 text-base">
+                <ul className="flex gap-6 items-center text-sm">
                   {menuItems.map((item, index) => {
                     const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
 
@@ -131,7 +131,7 @@ export default function HeroHeader() {
 
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <Button asChild size="sm" variant="default" className="px-4">
-                  <Link href="https://dashboard.edocumentiso.com/" target="_blank">
+                  <Link href="/validate-certificate" target="_blank">
                     <span className="text-base">Cek Sertifikat</span>
                   </Link>
                 </Button>

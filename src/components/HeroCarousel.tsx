@@ -39,7 +39,7 @@ export function HeroCarousel({
   const plugin = React.useRef(Autoplay({ delay: intervalMs, stopOnInteraction: true }));
 
   return (
-    <section className="relative w-full h-screen overflow-hidden mt-15">
+    <section className="relative w-full h-screen overflow-hidden">
       {/* BACKGROUND SLIDER */}
       <Carousel
         className="absolute inset-0 h-full w-full"

@@ -1,7 +1,5 @@
 'use client';
 
-import 'swiper/css';
-import 'swiper/css/pagination';
 import { layanansData } from '@/lib/data/layanan.data';
 import { useSearchParams } from 'next/navigation';
 import { ImageWithFallback } from '@/components/ui/image-with-fallback';
@@ -9,6 +7,8 @@ import { PageTransition } from '@/components/ui/page-transition';
 import { ChevronRight } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import Link from 'next/link';
+import { PaginationWrapper } from '@/components/ui/pagination-wrapper';
+import { Pagination } from '@/components/ui/Pagination';
 
 export default function LayananPage() {
   const searchParams = useSearchParams();
@@ -68,11 +68,11 @@ export default function LayananPage() {
             </div>
           </PageTransition>
 
-          {/* <div className="mt-12">
+          <div className="mt-12">
             <PaginationWrapper page={pageQuery} containerId="layanan-container">
               <Pagination currentPage={pageQuery} totalPages={totalPages} basePath="/layanan" />
             </PaginationWrapper>
-          </div> */}
+          </div>
         </div>
       </section>
     </main>

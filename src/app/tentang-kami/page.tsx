@@ -1,4 +1,4 @@
-import Certifications from '@/components/Certifications';
+import Certifications from '@/components/OurServices';
 import PageHeader from '@/components/PageHeader';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -17,11 +17,12 @@ export default function TentangKamiPage() {
       />
 
       {/* Company Overview */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <section className="mx-auto px-6 py-20 bg-white">
+        <div className="max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center mx-auto">
           {/* Left: Logo / Image */}
-          <div className="flex justify-center ">
-            <Image src="/images/logo-itcc.png" alt="Profil Perusahaan" className="h-auto object-contain drop-shadow-lg rounded-md" width="360" height="220" />
+          <div className="flex-row justify-center justify-items-center">
+            <Image src="/images/itcc-logo-white-back.png" alt="Profil Perusahaan" className="h-auto object-contain" width="360" height="220" />
+            <Image src="/images/ascb-white-back.png" alt="Profil Perusahaan" className="h-auto object-contain" width="360" height="220" />
           </div>
 
           {/* Right: Text */}
@@ -36,6 +37,38 @@ export default function TentangKamiPage() {
               <span className="font-bold">ITCC INTERNATIONAL</span> memberikan layanan jasa sertifikasi untuk lingkup penuh: ISO 9001, ISO 37001, ISO 14001, ISO 45001, ISO 22000,
               ISO 27001, ISO 13485, ISO 50001, dan ISO/TS 16949.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Accreditation Overview */}
+      <section className="mx-auto py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Left: Text */}
+          <div className="space-y-4 p-6">
+            <h2 className="text-3xl font-bold mb-6">Akreditasi Kami</h2>
+            <p className="leading-relaxed text-justify">
+              <span className="font-bold">ASCB</span> dibentuk pada tahun <span className="font-bold">1995 di Inggris Raya</span> untuk mengakreditasi berbagai badan sertifikasi
+              non-pemerintah internasional yang menilai produk, personel, dan sistem manajemen.
+            </p>
+            <p className="leading-relaxed text-justify">
+              <span className="font-bold">ASCB</span> adalah salah satu badan akreditasi internasional terkemuka di dunia, dihormati karena integritas, kepraktisan dan
+              ketidakberpihakannya.
+            </p>
+            <p className="leading-relaxed text-justify">
+              Sampai saat ini <span className="font-bold">ASCB</span> telah mengakreditasi lebih dari 230 lembaga sertifikasi di lebih dari 70 negara di dunia ( Eropa, Asia,
+              Afrika, Australia, dan Amerika Utara ), mendaftarkan lebih dari 10.000 penilai, auditor, dan personel jaminan kualitas pencapaian; dan memberikan sertifikasi kepada
+              lebih dari 30.000 organisasi dengan perkiraan omset tahunan gabungan $ 250 miliar dan mempekerjakan lebih dari 1 juta karyawan.
+            </p>
+            <p className="leading-relaxed text-justify">
+              Semua Lembaga Sertifikasi, organisasi, dan produk bersertifikat ditempatkan pada Daftar Internasional (IRQAO) yang memiliki fungsi pencarian langsung, memberikan
+              pengguna verifikasi instan keaslian ASCB dan pemegang sertifikat terakreditasi lainnya.
+            </p>
+          </div>
+
+          {/* Left: Logo / Image */}
+          <div className="flex-row justify-center justify-items-center rounded-md">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1aYyXkEKh0G9gtIaVMwHtvVzed7o&ehbc=2E312F" width="640" height="480" allowFullScreen />
           </div>
         </div>
       </section>
