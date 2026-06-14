@@ -10,7 +10,7 @@ export default function OurServices() {
         <h2 className="text-3xl font-bold mb-4">Layanan Kami</h2>
         <p className="mb-12 max-w-xl mx-auto">Sertifikasi bisnis anda dan dapatkan layanan terbaik kami.</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {ourServicesData.map((c, i) => (
             <div
               key={i}

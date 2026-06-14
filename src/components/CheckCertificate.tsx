@@ -12,7 +12,7 @@ export function CheckCertificateFields() {
         <Image src="/images/ascb-white-back.png" alt="Certificate Validated" height={180} width={280}></Image>
       </div>
       <div className="mx-auto px-6 md:space-y-2 lg:space-y-4 py-20">
-        <h2 className="text-balance text-base font-semibold mb-6">Cek sertifikat anda melalui form berikut</h2>
+        <h2 className="text-balance text-sm mb-4">Cek sertifikat anda melalui form berikut:</h2>
         <Field orientation="horizontal">
           <Input type="validation" placeholder="Nomor Sertifikat / Certificate Number" />
           <ButtonLink variant="primary" href="/" size="sm">
