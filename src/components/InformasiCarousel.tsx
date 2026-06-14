@@ -44,7 +44,7 @@ export function InformasiCarousel() {
           <div className="absolute bottom-6 left-6 right-6 lg:max-w-1/2 text-white space-y-4">
             <h2 className="text-xl md:text-3xl font-bold drop-shadow-lg line-clamp-2">{featured.title}</h2>
             <p className="text-sm md:text-base opacity-90 line-clamp-2">{featured.desc}</p>
-            <p className="text-sm opacity-90">
+            <p className="text-xs text-muted-foreground opacity-90">
               {featured.accountPublisher} | {featured.date}
             </p>
             <Link href={`/informasi/${featured.slug}`} className="hover:underline">

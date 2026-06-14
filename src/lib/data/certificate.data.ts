@@ -1,21 +1,6 @@
-export type CategoryCertificate = 'iso-9001' | 'iso-14001' | 'iso-37001' | 'iso-45001' | 'iso-27001' | 'haccp';
+import { CertificateItem } from '@/types/certificate.types';
 
-export interface CertificateItem {
-  slug: string;
-  scheme: string;
-  clientName: string;
-  certificateNumber: string;
-  scope: string;
-  image: string;
-  initialCertDate: Date;
-  endCertDate: Date;
-  surv1Date: Date;
-  surv2Date: Date;
-  locationNumber: number;
-  category: CategoryCertificate;
-}
-
-export const certificateData = [
+export const certificateData: CertificateItem[] = [
   {
     slug: 'iso-9001-2015',
     scheme: 'ISO 9001:2015',
@@ -27,8 +12,8 @@ export const certificateData = [
     endCertDate: 'February 27, 2029',
     surv1Date: 'January 26, 2027',
     surv2Date: 'January 26, 2028',
-    locationNumber: '1',
-    category: 'iso-9001',
+    locationNumber: 1,
+    category: 'active',
   },
   {
     slug: 'iso-14001-2015',
@@ -42,8 +27,8 @@ export const certificateData = [
     endCertDate: 'January 20, 2029',
     surv1Date: 'December 19, 2027',
     surv2Date: 'December 19, 2028',
-    locationNumber: '1',
-    category: 'iso-9001',
+    locationNumber: 1,
+    category: 'active',
   },
   {
     slug: 'iso-45001-2018',
@@ -57,8 +42,8 @@ export const certificateData = [
     endCertDate: 'April 26, 2029',
     surv1Date: 'March 25, 2027',
     surv2Date: 'March 25, 2028',
-    locationNumber: '1',
-    category: 'iso-14001',
+    locationNumber: 1,
+    category: 'active',
   },
   {
     slug: 'iso-27001-2022',
@@ -72,8 +57,8 @@ export const certificateData = [
     endCertDate: 'May 26, 2029',
     surv1Date: 'April 25, 2027',
     surv2Date: 'April 25, 2028',
-    locationNumber: '1',
-    category: 'iso-45001',
+    locationNumber: 1,
+    category: 'active',
   },
   {
     slug: 'iso-37001-2025',
@@ -87,7 +72,7 @@ export const certificateData = [
     endCertDate: 'June 16, 2029',
     surv1Date: 'May 15, 2027',
     surv2Date: 'May 15, 2028',
-    locationNumber: '1',
-    category: 'iso-27001',
+    locationNumber: 1,
+    category: 'active',
   },
 ];

@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export function CheckCertificateFields() {
   return (
-    <section className="flex justify-between items-center" id="ValidationCertificated">
+    <section className="flex justify-between py-20 items-center" id="ValidationCertificated">
       <div className="hidden md:block object-contain p-8 lg:px-40">
         <Image src="/images/itcc-logo-transparent-back.png" alt="Certificate Validated" height={180} width={280}></Image>
         <Image src="/images/ascb-white-back.png" alt="Certificate Validated" height={180} width={280}></Image>

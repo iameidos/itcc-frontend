@@ -125,7 +125,7 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
                   <div className="text-sm space-y-1.5 h-[48px] bg-surv1 items-center text-white flex pl-4">
                     <p className="text-sm">Certificate Status</p>
                   </div>
-                  <div className="flex justify-center items-center text-sm">
+                  <div className="items-center">
                     <StatusButton status="active" />
                   </div>
                 </div>
@@ -158,7 +158,7 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
                   <div className="text-sm space-y-1.5 h-[48px] bg-surv1 items-center text-white flex pl-4">
                     <p className="text-sm">First Surveillance Status</p>
                   </div>
-                  <div className="flex justify-center items-center text-sm">
+                  <div className="items-center">
                     <StatusButton status="conducted" />
                   </div>
                 </div>
@@ -173,7 +173,7 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
                   <div className="text-sm space-y-1.5 h-[48px] bg-surv1 items-center text-white flex pl-4">
                     <p className="text-sm">Second Surveillance Status</p>
                   </div>
-                  <div className="flex justify-center items-center text-sm">
+                  <div className="items-center">
                     <StatusButton status="withdrawn" />
                   </div>
                 </div>

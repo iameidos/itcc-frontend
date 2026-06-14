@@ -1,3 +1,4 @@
+import CallToAction from '@/components/CallToActions';
 import Certifications from '@/components/OurServices';
 import PageHeader from '@/components/PageHeader';
 import { Separator } from '@/components/ui/separator';
@@ -43,8 +44,7 @@ export default function TentangKamiPage() {
 
       {/* Accreditation Overview */}
       <section className="mx-auto py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Left: Text */}
+        <div className="md:flex gap-12 items-center">
           <div className="space-y-4 p-6">
             <h2 className="text-3xl font-bold mb-6">Akreditasi Kami</h2>
             <p className="leading-relaxed text-justify">
@@ -66,7 +66,6 @@ export default function TentangKamiPage() {
             </p>
           </div>
 
-          {/* Left: Logo / Image */}
           <div className="flex-row justify-center justify-items-center rounded-md">
             <iframe src="https://www.google.com/maps/d/embed?mid=1aYyXkEKh0G9gtIaVMwHtvVzed7o&ehbc=2E312F" width="640" height="480" allowFullScreen />
           </div>
@@ -116,28 +115,17 @@ export default function TentangKamiPage() {
       <Separator className="max-w-5xl mx-auto" />
 
       {/* Full Screen Image */}
-      <section className="w-full py-20">
+      {/* <section className="w-full py-20">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Preview Image</h2>
           <p className="mb-8">Hubungi kami untuk konsultasi atau informasi lebih lanjut.</p>
           <Image src="/images/about-company.jpg" width="1920" height="1080" alt="Tentang Kami" className="w-full h-full object-cover object-center rounded-md shadow-md" />
         </div>
-      </section>
+      </section> */}
 
       <Separator className="max-w-5xl mx-auto" />
 
-      <Certifications />
-
-      {/* CTA */}
-      <section className="py-20">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-4">Siap Bekerja Sama?</h2>
-          <p className="mb-8">Hubungi kami untuk konsultasi atau informasi lebih lanjut.</p>
-          <a href="/kontak" className="inline-block bg-blue-600 hover:bg-blue-700 transition px-8 py-3 rounded-md font-semibold">
-            Hubungi Kami
-          </a>
-        </div>
-      </section>
+      <CallToAction />
     </div>
   );
 }
