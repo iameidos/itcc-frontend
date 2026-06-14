@@ -5,7 +5,7 @@ import { ReactNode } from 'react';
 
 export default function FeaturesTwo() {
   return (
-    <section className="py-16 md:py-32 bg-accent-foreground" id="Solutions">
+    <section className="py-16 md:py-20 bg-accent" id="Solutions">
       <div className="@container mx-auto max-w-5xl px-6">
         <div className="text-center">
           <h2 className="text-balance text-4xl font-semibold lg:text-5xl uppercase">ITCC International</h2>

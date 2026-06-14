@@ -11,8 +11,8 @@ export default function FooterSection() {
       <div className="text-accent-foreground mx-auto max-w-5xl px-6">
         {/* Logo */}
         <Link href="/" aria-label="go home" className="mx-auto block size-fit">
-          <Image src="/images/logo-itcc.png" alt="Logo" width={100} height={40} className="hidden dark:block" />
-          <Image src="/images/logo-itcc.png" alt="Logo" width={100} height={40} className="dark:hidden" />
+          <Image src="/images/itcc-logo-transparent-back.png" alt="Logo" width={148} height={40} />
+          <Image src="/images/ascb-white-back.png" alt="Logo" width={148} height={40} />
         </Link>
 
         {/* Copyright */}
@@ -41,7 +41,7 @@ export default function FooterSection() {
           ))}
         </div>
 
-        <Separator orientation="horizontal" className="border" />
+        <Separator orientation="horizontal" />
 
         {/* Legal Links */}
         <div className="my-8 flex flex-wrap justify-center items-center text-center gap-6 text-xs">

@@ -5,6 +5,7 @@ export const certificateData: CertificateItem[] = [
     slug: 'iso-9001-2015',
     scheme: 'ISO 9001:2015',
     clientName: 'PT. ADIQUATRO ELEKTRIKINDO PERKASA',
+    address: 'Kota Bogor No. 110, Jawa Barat Indonesia',
     certificateNumber: '4157667',
     image: '/images/informasi/img-iso-9001-2015.jpg',
     scope: 'Mechanical, Electrical, Civil, Engineering Supply and Construction, Renewable Energy and Power Solution',
@@ -19,6 +20,7 @@ export const certificateData: CertificateItem[] = [
     slug: 'iso-14001-2015',
     scheme: 'ISO 14001:2015',
     clientName: 'PT. Perusahaan Contoh Satu',
+    address: 'Kota Bogor No. 110, Jawa Barat Indonesia',
     certificateNumber: 'EMS-SSA25049',
     image: '/images/informasi/img-iso-14001-2015.jpg',
     scope:
@@ -34,6 +36,7 @@ export const certificateData: CertificateItem[] = [
     slug: 'iso-45001-2018',
     scheme: 'ISO 45001:2018',
     clientName: 'PT. Perusahaan Contoh Dua',
+    address: 'Kota Bogor No. 110, Jawa Barat Indonesia',
     certificateNumber: 'EMS-SSA25050',
     image: '/images/informasi/img-iso-45001-2018.jpg',
     scope:
@@ -49,6 +52,7 @@ export const certificateData: CertificateItem[] = [
     slug: 'iso-27001-2022',
     scheme: 'ISO 27001:2022',
     clientName: 'PT. Perusahaan Contoh Tiga',
+    address: 'Kota Bogor No. 110, Jawa Barat Indonesia',
     certificateNumber: 'EMS-SSA25051',
     image: '/images/informasi/img-iso-27001-2022.jpg',
     scope:
@@ -64,6 +68,7 @@ export const certificateData: CertificateItem[] = [
     slug: 'iso-37001-2025',
     scheme: 'ISO 37001:2025',
     clientName: 'PT. Perusahaan Contoh Empat',
+    address: 'Kota Bogor No. 110, Jawa Barat Indonesia',
     certificateNumber: 'EMS-SSA25052',
     image: '/images/informasi/img-iso-37001-2025.jpg',
     scope:

@@ -44,11 +44,7 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
 
             <div className="flex-row items-center justify-items-center border p-4 lg:p-8 rounded-sm bg-white">
               <div className="w-full text-center font-bold text-xl lg:text-2xl py-1.5 text-white bg-surv1 rounded-md leading-relaxed uppercase">{info.clientName}</div>
-              <div className="grid md:grid-cols-3 gap-4 w-full justify-items-center py-8 px-2">
-                <div className="text-center text-sm space-y-2.5">
-                  <h1>Scope of Certification :</h1>
-                  <p className="text-base font-bold">{info.scope}</p>
-                </div>
+              <div className="grid md:grid-cols-2 gap-4 w-full justify-items-center py-8 px-2">
                 <div className="text-center text-sm space-y-2.5">
                   <h1>Scheme :</h1>
                   <p className="text-base font-bold">{info.scheme}</p>
@@ -62,6 +58,10 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
                 <div className="text-center max-w-xl text-sm space-y-2.5">
                   <h1>Scope of Certification :</h1>
                   <p className="text-base font-bold">{info.scope}</p>
+                </div>
+                <div className="text-center text-sm space-y-2.5">
+                  <h1>Location :</h1>
+                  <p className="text-base font-bold">{info.address}</p>
                 </div>
                 <div className="text-center text-sm space-y-2.5">
                   <h1>Location :</h1>

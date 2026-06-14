@@ -34,7 +34,7 @@ export default function OurServices() {
 
               {/* Title */}
               <Link href={`/layanan/${c.slug}`}>
-                <h3 className="font-dmsans text-xl font-semibold mb-4 px-4 group-hover:underline">
+                <h3 className="font-dmsans text-base font-semibold mb-4 px-4 group-hover:underline">
                   {c.code} - {c.title}
                 </h3>
               </Link>

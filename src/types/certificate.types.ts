@@ -4,6 +4,7 @@ export interface CertificateItem {
   slug: string;
   scheme: string;
   clientName: string;
+  address: string;
   certificateNumber: string;
   scope: string;
   image: string;
