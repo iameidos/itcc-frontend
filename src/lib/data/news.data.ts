@@ -1,11 +1,4 @@
-export interface NewsItem {
-  slug: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  image: string;
-  content: string;
-}
+import { NewsItem } from '@/types/news.types';
 
 export const newsData: NewsItem[] = [
   {

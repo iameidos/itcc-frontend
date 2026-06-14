@@ -1,16 +1,5 @@
-import { LucideIcon, Home, FileText, Newspaper, Layers, Shield, BookOpen } from 'lucide-react';
-
-export interface SitemapItem {
-  label: string;
-  href: string;
-}
-
-export interface SitemapSection {
-  id: string;
-  title: string;
-  icon: LucideIcon;
-  items: SitemapItem[];
-}
+import { SitemapSection } from '@/types/sitemap.types';
+import { BookOpen, FileText, Home, Layers, Newspaper, Shield } from 'lucide-react';
 
 export const sitemapData: SitemapSection[] = [
   {
@@ -38,28 +27,19 @@ export const sitemapData: SitemapSection[] = [
     id: 'berita',
     title: 'Berita & Artikel',
     icon: Newspaper,
-    items: [
-      { label: 'Daftar Berita', href: '/berita' },
-      // detail pages auto-generated di halaman
-    ],
+    items: [{ label: 'Daftar Berita', href: '/berita' }],
   },
   {
     id: 'layanan',
     title: 'Layanan Kami',
     icon: Layers,
-    items: [
-      { label: 'Daftar Layanan', href: '/layanan' },
-      // detail pages auto-generated di halaman
-    ],
+    items: [{ label: 'Daftar Layanan', href: '/layanan' }],
   },
   {
     id: 'others',
     title: 'Lainnya',
     icon: BookOpen,
-    items: [
-      { label: 'Daftar Lainnya', href: '#' },
-      // detail pages auto-generated di halaman
-    ],
+    items: [{ label: 'Daftar Lainnya', href: '#' }],
   },
   {
     id: 'legal',

@@ -1,14 +1,4 @@
-export type CategoryISO = 'LSPr' | 'LSSM' | 'LSUHK';
-
-export interface OurServicesItem {
-  code: string;
-  slug: string;
-  title: string;
-  desc: string;
-  date: string;
-  image: string;
-  category: CategoryISO;
-}
+import { OurServicesItem } from '@/types/our-service.types';
 
 export const ourServicesData: OurServicesItem[] = [
   {
