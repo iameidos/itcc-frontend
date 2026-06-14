@@ -1,21 +1,14 @@
-export type InformasiCategory = 'standar-iso' | 'peraturan-perundangan';
+import { InformasiItem } from '@/types/information.types';
 
-export interface InformasiItem {
-  slug: string;
-  code: string;
-  title: string;
-  image: string;
-  desc: string;
-  category: InformasiCategory;
-}
-
-export const informasiData = [
+export const informasiData: InformasiItem[] = [
   {
-    slug: 'iso-9001-2015',
-    code: 'ISO 9001:2015',
-    title: 'Sistem Manajemen Mutu',
-    image: '/images/informasi/img-iso-9001-2015.jpg',
-    desc: 'ISO 9001 adalah alat manajemen strategis yang digunakan organisasi untuk meningkatkan kualitas produk/jasa secara konsisten, sehingga pada akhirnya akan meningkatkan kinerja organisasi dan kepuasan pelanggan.',
+    slug: 'apa-itu-iso-22000',
+    code: 'Standar ISO 22000',
+    title: 'Mengenai Apa Itu ISO 22000',
+    image: '/images/informasi/standar-iso/informasi-standar-iso-22000.jpg',
+    desc: 'ISO 22000:2018, Food safety management systems – Requirements for any organization in the food chain (Sistem Manajemen Keamanan Pangan – Persyaratan bagi setiap organisasi yang bergerak dalam rantai pangan), metetapkan serangkaian persyaratan bagi sistem manajemen kemanan pangan. Standar ini mendefiniskan apa yang harus dilakukan organisasi dalam rangka menunjukkan kemampuannya dalam pengendalian segala bahaya keamanan pangan serta memastikan keamanannya untuk dikonsumsi.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Publisher',
     category: 'standar-iso',
   },
   {
@@ -24,6 +17,8 @@ export const informasiData = [
     title: 'Sistem Manajemen Lingkungan',
     image: '/images/informasi/img-iso-14001-2015.jpg',
     desc: 'ISO 14001 adalah alat manajemen strategis yang digunakan organisasi untuk mengelola tanggung jawab lingkungan secara sistematis, meningkatkan kinerja lingkungan, mematuhi peraturan hukum yang berlaku, dan mencapai tujuan keberlanjutan (sustainability). Ini mencakup identifikasi, pengendalian, dan pengurangan dampak lingkungan dari aktivitas, produk, atau jasa secara efektif.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Publisher',
     category: 'standar-iso',
   },
   {
@@ -32,6 +27,8 @@ export const informasiData = [
     title: 'Keselamatan & Kesehatan Kerja',
     image: '/images/informasi/img-iso-45001-2018.jpg',
     desc: 'ISO 45001 adalah alat manajemen strategis yang digunakan organisasi untuk menyediakan tempat kerja yang aman dan sehat, mencegah cedera dan penyakit akibat kerja, serta meningkatkan kinerja Kesehatan dan Keselamatan Kerja (K3) secara proaktif dan berkelanjutan.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Publisher',
     category: 'standar-iso',
   },
   {
@@ -40,6 +37,8 @@ export const informasiData = [
     title: 'Keamanan Informasi',
     image: '/images/informasi/img-iso-27001-2022.jpg',
     desc: 'ISO 27001 adalah alat manajemen strategis yang digunakan organisasi untuk melindungi kerahasiaan, integritas, dan ketersediaan data sensitif dari ancaman siber, serta mengelola risiko keamanan secara komprehensif.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Publisher',
     category: 'standar-iso',
   },
   {
@@ -48,6 +47,8 @@ export const informasiData = [
     title: 'Anti Penyuapan',
     image: '/images/informasi/img-iso-37001-2025.jpg',
     desc: 'ISO 37001 adalah alat manajemen strategis yang digunakan organisasi untuk mencegah, mendeteksi, dan menanggapi penyuapan, memastikan kepatuhan hukum, serta membangun budaya anti-suap yang kuat, memberikan kredibilitas dan perlindungan hukum, meskipun tidak menjamin pencegahan total, namun meminimalkan risiko secara proporsional.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Publisher',
     category: 'standar-iso',
   },
   {
@@ -56,6 +57,8 @@ export const informasiData = [
     title: 'Sistem Manajemen Kepatuhan',
     image: '/images/informasi/img-iso-37301-2021.jpg',
     desc: 'ISO 37301 adalah alat manajemen strategis yang digunakan organisasi untuk mengembangkan, menerapkan, memelihara, dan meningkatkan Sistem Manajemen Kepatuhan (CMS) yang efektif. Standar ini bertujuan membangun budaya integritas, proaktif mengelola risiko hukum dan regulasi, serta memastikan kepatuhan terhadap hukum, standar etika, dan kebijakan internal.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Publisher',
     category: 'standar-iso',
   },
   {
@@ -64,6 +67,8 @@ export const informasiData = [
     title: 'Alat Manajemen Strategis',
     image: '/images/informasi/img-iso-50001-2018.jpg',
     desc: 'ISO 50001 adalah alat manajemen strategis yang digunakan organisasi untuk meningkatkan kinerja energi secara sistematis, menggunakan energi secara lebih efisien, memangkas biaya operasional, mengurangi emisi gas rumah kaca, dan meningkatkan keberlanjutan bisnis melalui pendekatan Plan-Do-Check-Act (PDCA).',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Publisher',
     category: 'standar-iso',
   },
   {
@@ -72,6 +77,8 @@ export const informasiData = [
     title: 'Manajemen Organisasi Pendidikan',
     image: '/images/informasi/img-iso-21001-2025.jpg',
     desc: 'ISO 21001 adalah alat manajemen strategis yang digunakan organisasi Pendidikan untuk meningkatkan efektivitas dan efisiensi, memenuhi kebutuhan peserta didik dan pemangku kepentingan, meningkatkan kredibilitas/reputasi, serta menjamin konsistensi kualitas layanan pendidikan secara berkelanjutan.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Publisher',
     category: 'standar-iso',
   },
   {
@@ -80,6 +87,8 @@ export const informasiData = [
     title: 'Manajemen Keberlangsungan Bisnis',
     image: '/images/informasi/img-iso-22301-2019.jpg',
     desc: 'ISO 22301 adalah alat manajemen strategis yang digunakan organisasi untuk merencanakan, menetapkan, menerapkan, mengoperasikan, memantau, meninjau, memelihara, dan meningkatkan Sistem Manajemen Kelangsungan Usaha (BCMS) secara efektif. Standar ini memastikan organisasi mampu mempersiapkan diri, merespons, dan pulih dari gangguan operasional, meminimalkan dampak finansial dan reputasi, serta menjaga kelangsungan bisnis utama saat terjadi krisis.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Publisher',
     category: 'standar-iso',
   },
   {
@@ -88,6 +97,8 @@ export const informasiData = [
     title: 'Manajemen Risiko',
     image: '/images/informasi/img-iso-31000-2018.jpg',
     desc: 'ISO 31000 adalah alat manajemen strategis yang digunakan organisasi untuk  mengidentifikasi, menganalisis, dan menangani ancaman (ekonomi, lingkungan, siber) secara proaktif, bukan reaktif, sehingga meningkatkan pengambilan keputusan yang lebih baik, ketahanan operasional, kepercayaan pemangku kepentingan, serta kepatuhan terhadap regulasi, mengubah ketidakpastian menjadi peluang strategis untuk keberlanjutan jangka panjang.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Publisher',
     category: 'standar-iso',
   },
   {
@@ -96,6 +107,8 @@ export const informasiData = [
     title: 'Keamanan Rantai Pasok',
     image: '/images/informasi/image-.jpg',
     desc: 'Mengelola risiko keamanan dalam rantai pasok global untuk memastikan kelancaran distribusi.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Publisher',
     category: 'standar-iso',
   },
   {
@@ -104,6 +117,8 @@ export const informasiData = [
     title: 'Perangkat Medis',
     image: '/images/informasi/img-iso-13485-2016.jpg',
     desc: 'ISO 13485 adalah alat manajemen strategis yang digunakan organisasi untuk memastikan keamanan, efektivitas, dan kualitas perangkat medis secara konsisten, serta memenuhi persyaratan regulasi internasional (hukum) yang ketat. Standar ini membantu meminimalkan risiko, meningkatkan kepuasan pelanggan, dan memfasilitasi akses pasar global.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Publisher',
     category: 'standar-iso',
   },
   {
@@ -112,6 +127,8 @@ export const informasiData = [
     title: 'sistem Manajemen Mutu Laboratorium',
     image: '/images/informasi/img-iso-17021-2015.jpg',
     desc: 'ISO 17025 adalah alat manajemen strategis untuk membantu organisasi/laboratorium meningkatkan kompetensi teknis, memastikan validitas hasil pengujian/kalibrasi yang konsisten dan akurat, serta meningkatkan kredibilitas dan pengakuan internasional. Standar ini memungkinkan laboratorium mengoptimalkan operasional, mengurangi kesalahan/pengulangan kerja, dan memenuhi kepatuhan regulasi.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Publisher',
     category: 'standar-iso',
   },
   {
@@ -120,6 +137,8 @@ export const informasiData = [
     title: 'sistem Manajemen Mutu Laboratorium',
     image: '/images/informasi/img-iso-17025-2017.jpg',
     desc: 'ISO 17025 adalah alat manajemen strategis untuk membantu organisasi/laboratorium meningkatkan kompetensi teknis, memastikan validitas hasil pengujian/kalibrasi yang konsisten dan akurat, serta meningkatkan kredibilitas dan pengakuan internasional. Standar ini memungkinkan laboratorium mengoptimalkan operasional, mengurangi kesalahan/pengulangan kerja, dan memenuhi kepatuhan regulasi.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Publisher',
     category: 'standar-iso',
   },
   {
@@ -128,6 +147,8 @@ export const informasiData = [
     title: 'Keamanan Pangan',
     image: '/images/informasi/img-iso-22000-2018.jpg',
     desc: 'ISO 22000 adalah alat manajemen strategis yang digunakan organisasi untuk mengidentifikasi, mengendalikan, dan meminimalkan risiko keamanan pangan secara efektif di seluruh rantai pasok. Sistem ini memastikan produk aman, mematuhi regulasi, meningkatkan kepercayaan konsumen, dan mendorong peningkatan berkelanjutan pada performa keamanan pangan.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'standar-iso',
   },
   {
@@ -136,6 +157,8 @@ export const informasiData = [
     title: 'Manajemen Layanan TI',
     image: '/images/informasi/image-.jpg',
     desc: 'Meningkatkan kualitas layanan teknologi informasi melalui proses yang terstandarisasi.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'standar-iso',
   },
   {
@@ -144,6 +167,8 @@ export const informasiData = [
     title: 'Tanggung Jawab Sosial',
     image: '/images/informasi/img-iso-26000-2010.jpg',
     desc: 'ISO 26000 adalah alat manajemen strategis untuk membantu organisasi mengintegrasikan tanggung jawab sosial (csr) ke dalam nilai-nilai, strategi, dan operasional mereka, guna berkontribusi pada pembangunan berkelanjutan. panduan ini memungkinkan organisasi mengidentifikasi, mengelola, dan memitigasi risiko sosial dan lingkungan, serta meningkatkan reputasi dan hubungan dengan pemangku kepentingan.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'standar-iso',
   },
   {
@@ -152,6 +177,8 @@ export const informasiData = [
     title: 'Layanan Pembelajaran Non‑Formal',
     image: '/images/informasi/image-.jpg',
     desc: 'Standar untuk penyedia pelatihan non‑formal agar layanan lebih efektif dan terukur.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'standar-iso',
   },
   {
@@ -160,6 +187,8 @@ export const informasiData = [
     title: 'Keselamatan Lalu Lintas',
     image: '/images/informasi/image-.jpg',
     desc: 'Mengurangi kecelakaan lalu lintas melalui manajemen risiko yang terstruktur.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'standar-iso',
   },
   {
@@ -168,6 +197,8 @@ export const informasiData = [
     title: 'Penanganan Keluhan Pelanggan',
     image: '/images/informasi/image-.jpg',
     desc: 'Meningkatkan kepuasan pelanggan melalui proses penanganan keluhan yang efektif.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'standar-iso',
   },
   {
@@ -176,6 +207,8 @@ export const informasiData = [
     title: 'Layanan Pembelajaran',
     image: '/images/informasi/image-.jpg',
     desc: 'Standar internasional untuk penyedia layanan pendidikan dan pelatihan profesional.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'standar-iso',
   },
   {
@@ -184,6 +217,8 @@ export const informasiData = [
     title: 'Sistem Manajemen Kecerdasan Buatan',
     image: '/images/informasi/image-.jpg',
     desc: 'ISO 42001 adalah alat manajemen strategis yang digunakan organisasi untuk membantu organisasi membangun, menerapkan, memelihara, dan terus meningkatkan Sistem Manajemen Kecerdasan Buatan (Artificial Intelligence Management System/AIMS) secara terstruktur dan berkelanjutan.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'standar-iso',
   },
   {
@@ -192,6 +227,8 @@ export const informasiData = [
     image: '/images/informasi/peraturan.jpg',
     title: 'Ketenagakerjaan',
     desc: 'Mengatur hubungan kerja, hak dan kewajiban pekerja serta perusahaan untuk menciptakan lingkungan kerja yang adil.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -200,6 +237,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Keselamatan Kerja',
     desc: 'Landasan hukum utama terkait keselamatan dan kesehatan kerja di lingkungan industri.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -208,6 +247,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
     desc: 'Mengatur pengendalian pencemaran, pengelolaan limbah, dan perlindungan lingkungan.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -216,6 +257,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'SMK3',
     desc: 'Peraturan pemerintah tentang penerapan Sistem Manajemen K3 di perusahaan.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -224,6 +267,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Pangan',
     desc: 'Mengatur keamanan pangan, mutu, dan distribusi untuk melindungi konsumen.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -232,6 +277,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Pengelolaan Limbah B3',
     desc: 'Mengatur pengelolaan limbah bahan berbahaya dan beracun secara aman.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -240,6 +287,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Informasi dan Transaksi Elektronik',
     desc: 'Mengatur keamanan informasi, transaksi digital, dan perlindungan data.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -248,6 +297,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Konservasi Energi',
     desc: 'Mengatur efisiensi energi dan kewajiban audit energi bagi industri.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -256,6 +307,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Perlindungan Konsumen',
     desc: 'Menjamin hak konsumen dan kewajiban pelaku usaha dalam menyediakan produk yang aman.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -264,6 +317,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Kearsipan',
     desc: 'Mengatur pengelolaan arsip negara dan perusahaan secara sistematis dan aman.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -272,6 +327,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Keselamatan Kebakaran',
     desc: 'Mengatur pencegahan dan penanggulangan kebakaran di tempat kerja.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -280,6 +337,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Rahasia Dagang',
     desc: 'Melindungi informasi bisnis penting dari penyalahgunaan atau kebocoran.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -288,6 +347,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Kesehatan',
     desc: 'Mengatur standar kesehatan masyarakat dan lingkungan kerja.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -296,6 +357,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Angkutan Barang Berbahaya',
     desc: 'Mengatur transportasi bahan berbahaya agar aman dan sesuai standar.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -304,6 +367,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Perdagangan',
     desc: 'Mengatur kegiatan perdagangan, distribusi barang, dan perlindungan pelaku usaha.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -312,6 +377,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Pengelolaan Kualitas Air',
     desc: 'Mengatur baku mutu air dan pengendalian pencemaran air.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -320,6 +387,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Penanggulangan Bencana',
     desc: 'Mengatur mitigasi, respons, dan pemulihan bencana bagi organisasi dan masyarakat.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -328,6 +397,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Keamanan Pangan',
     desc: 'Mengatur standar keamanan pangan untuk industri makanan dan minuman.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -336,6 +407,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Paten',
     desc: 'Melindungi inovasi teknologi dan hak kekayaan intelektual perusahaan.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
   {
@@ -344,6 +417,8 @@ export const informasiData = [
     image: '/images/informasi/image-.jpg',
     title: 'Perindustrian',
     desc: 'Mengatur kegiatan industri agar berdaya saing dan memenuhi standar nasional.',
+    date: 'June 14, 2026',
+    accountPublisher: 'Account Admin',
     category: 'peraturan-perundangan',
   },
 ];

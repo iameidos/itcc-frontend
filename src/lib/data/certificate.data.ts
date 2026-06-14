@@ -33,7 +33,7 @@ export const certificateData = [
   {
     slug: 'iso-14001-2015',
     scheme: 'ISO 14001:2015',
-    title: 'Sistem Manajemen Lingkungan',
+    clientName: 'PT. Perusahaan Contoh Satu',
     certificateNumber: 'EMS-SSA25049',
     image: '/images/informasi/img-iso-14001-2015.jpg',
     scope:
@@ -48,7 +48,7 @@ export const certificateData = [
   {
     slug: 'iso-45001-2018',
     scheme: 'ISO 45001:2018',
-    title: 'Keselamatan & Kesehatan Kerja',
+    clientName: 'PT. Perusahaan Contoh Dua',
     certificateNumber: 'EMS-SSA25050',
     image: '/images/informasi/img-iso-45001-2018.jpg',
     scope:
@@ -63,7 +63,7 @@ export const certificateData = [
   {
     slug: 'iso-27001-2022',
     scheme: 'ISO 27001:2022',
-    title: 'Keamanan Informasi',
+    clientName: 'PT. Perusahaan Contoh Tiga',
     certificateNumber: 'EMS-SSA25051',
     image: '/images/informasi/img-iso-27001-2022.jpg',
     scope:
@@ -78,7 +78,7 @@ export const certificateData = [
   {
     slug: 'iso-37001-2025',
     scheme: 'ISO 37001:2025',
-    title: 'Anti Penyuapan',
+    clientName: 'PT. Perusahaan Contoh Empat',
     certificateNumber: 'EMS-SSA25052',
     image: '/images/informasi/img-iso-37001-2025.jpg',
     scope:

@@ -1,25 +1,23 @@
 import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
 import { notFound } from 'next/navigation';
-import { layanansData } from '@/lib/data/layanan.data';
 import { ImageWithFallback } from '@/components/ui/image-with-fallback';
 import { ChevronLeft, CheckCircle2 } from 'lucide-react';
+import { ourServicesData } from '@/lib/data/our-services.data';
 
 export default async function LayananDetailPage(props: { params: Promise<{ slug: string }> }) {
   const { slug } = await props.params;
 
-  const layanan = layanansData.find((item) => item.slug === slug);
-  if (!layanan) return notFound();
-
-  const Icon = layanan.icon;
+  const service = ourServicesData.find((item) => item.slug === slug);
+  if (!service) return notFound();
 
   return (
     <div className="w-full">
       <PageHeader
-        title={layanan.title}
+        title={service.title}
         subtitle="Layanan profesional untuk mendukung kebutuhan organisasi Anda."
         backgroundImage="/images/pages-header/about-us.jpg"
-        breadcrumb={[{ label: 'Home', href: '/' }, { label: 'Layanan', href: '/layanan' }, { label: layanan.title }]}
+        breadcrumb={[{ label: 'Home', href: '/' }, { label: 'Layanan', href: '/layanan' }, { label: service.title }]}
       />
 
       {/* Custom Hero Section */}
@@ -32,20 +30,20 @@ export default async function LayananDetailPage(props: { params: Promise<{ slug:
 
           {/* IMAGE HERO KHUSUS LAYANAN */}
           <div className="relative w-full h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden shadow-lg mb-10">
-            <ImageWithFallback src={layanan.image} alt={layanan.title} fill className="object-cover" />
+            <ImageWithFallback src={service.image} alt={service.title} fill className="object-cover" />
 
             <div className="absolute inset-0 bg-linear-to-b from-black/10 via-black/20 to-black/30" />
           </div>
 
           <div className="flex items-start gap-8">
-            <div className="w-28 h-28 rounded-2xl bg-primary backdrop-blur-md flex items-center justify-center shadow-xl">
+            {/* <div className="w-28 h-28 rounded-2xl bg-primary backdrop-blur-md flex items-center justify-center shadow-xl">
               <Icon className="h-14 w-14 text-white" />
-            </div>
+            </div> */}
 
             <div>
-              <p className="font-medium mb-2">{layanan.code}</p>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">{layanan.title}</h1>
-              <p className="max-w-4xl text-lg text-justify">{layanan.desc}</p>
+              <p className="font-medium mb-2">{service.code}</p>
+              <h1 className="text-2xl md:text-4xl font-bold leading-tight mb-4">{service.title}</h1>
+              <p className="max-w-5xl text-lg text-justify">{service.desc}</p>
             </div>
           </div>
         </div>
@@ -66,7 +64,7 @@ export default async function LayananDetailPage(props: { params: Promise<{ slug:
                 'Dokumen tersimpan rapi, mudah dilacak, dan siap diakses kapan pun dibutuhkan',
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <CheckCircle2 className="h-8 w-8 text-primary" />
+                  <CheckCircle2 className="text-primary" size={32} />
                   <p className="text-base">{item}</p>
                 </div>
               ))}

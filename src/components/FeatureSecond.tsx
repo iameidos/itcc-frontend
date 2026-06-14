@@ -5,7 +5,7 @@ import { ReactNode } from 'react';
 
 export default function FeaturesTwo() {
   return (
-    <section className="py-16 md:py-32 bg-white" id="Solutions">
+    <section className="py-16 md:py-32 bg-accent-foreground" id="Solutions">
       <div className="@container mx-auto max-w-5xl px-6">
         <div className="text-center">
           <h2 className="text-balance text-4xl font-semibold lg:text-5xl uppercase">ITCC International</h2>
@@ -118,7 +118,7 @@ export default function FeaturesTwo() {
           </div>
         </Card>
         <div className="flex justify-center text-center py-8">
-          <Link href="/layanan" className="hover:underline">
+          <Link href="/tentang-kami" className="hover:underline">
             <span className="flex items-center text-sm font-medium ">
               selengkapnya <ChevronRight className="w-4 h-4" />
             </span>

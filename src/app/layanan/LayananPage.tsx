@@ -1,6 +1,5 @@
 'use client';
 
-import { layanansData } from '@/lib/data/layanan.data';
 import { useSearchParams } from 'next/navigation';
 import { ImageWithFallback } from '@/components/ui/image-with-fallback';
 import { PageTransition } from '@/components/ui/page-transition';
@@ -9,17 +8,18 @@ import PageHeader from '@/components/PageHeader';
 import Link from 'next/link';
 import { PaginationWrapper } from '@/components/ui/pagination-wrapper';
 import { Pagination } from '@/components/ui/Pagination';
+import { ourServicesData } from '@/lib/data/our-services.data';
 
 export default function LayananPage() {
   const searchParams = useSearchParams();
   const pageQuery = Number(searchParams.get('page') || '1');
 
-  const itemsPerPage = 2;
-  const totalItems = layanansData.length;
+  const itemsPerPage = 4;
+  const totalItems = ourServicesData.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   const startIndex = (pageQuery - 1) * itemsPerPage;
-  const paginatedData = layanansData.slice(startIndex, startIndex + itemsPerPage);
+  const paginatedData = ourServicesData.slice(startIndex, startIndex + itemsPerPage);
 
   return (
     <main className="w-full">
@@ -44,14 +44,16 @@ export default function LayananPage() {
                   <div key={c.slug} className="h-[480px] flex flex-col group rounded-xl overflow-hidden border bg-card shadow-sm hover:shadow-md transition">
                     {/* IMAGE */}
                     <div className="relative w-full">
-                      <ImageWithFallback src={c.image} alt={c.title} width={480} height={320} className="object-cover group-hover:scale-105 transition duration-300" />
+                      <ImageWithFallback src={c.image} alt={c.title} width={480} height={120} className="object-contain group-hover:scale-105 transition duration-300" />
                     </div>
 
                     {/* CONTENT */}
                     <div className="p-5 flex flex-col justify-between h-full">
                       <div className="space-y-2">
                         <Link href={`/layanan/${c.slug}`}>
-                          <h3 className="text-lg font-semibold line-clamp-2 group-hover:underline">{c.title}</h3>
+                          <h3 className="text-lg font-semibold line-clamp-1 group-hover:underline">
+                            {c.code} - {c.title}
+                          </h3>
                         </Link>
 
                         <p className="text-sm line-clamp-3">{c.desc}</p>
@@ -59,7 +61,7 @@ export default function LayananPage() {
 
                       <Link href={`/layanan/${c.slug}`} className="my-4 text-sm font-medium inline-flex items-center gap-1 hover:underline">
                         Selengkapnya
-                        <ChevronRight className="w-4 h-4" />
+                        <ChevronRight size={14} />
                       </Link>
                     </div>
                   </div>

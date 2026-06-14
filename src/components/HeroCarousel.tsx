@@ -24,10 +24,11 @@ interface HeroCarouselProps {
 
 export function HeroCarousel({
   slides = [
-    { src: '/images/sliders/slider-used-1.jpg', alt: 'Hero 1' },
-    { src: '/images/sliders/slider-used-2.jpg', alt: 'Hero 2' },
-    { src: '/images/sliders/slider-used-3.jpg', alt: 'Hero 3' },
-    { src: '/images/sliders/slider-used-4.jpg', alt: 'Hero 4' },
+    { src: '/images/sliders/slider-itcc-1.jpg', alt: 'Hero 1' },
+    { src: '/images/sliders/slider-itcc-2.jpg', alt: 'Hero 2' },
+    { src: '/images/sliders/slider-itcc-3.jpg', alt: 'Hero 3' },
+    { src: '/images/sliders/slider-itcc-4.jpg', alt: 'Hero 4' },
+    { src: '/images/sliders/slider-itcc-5.jpg', alt: 'Hero 4' },
   ],
   autoplay = true,
   intervalMs = 5500,
@@ -64,8 +65,8 @@ export function HeroCarousel({
       </Carousel>
 
       {/* FOREGROUND TEXT */}
-      <div className="relative z-20 flex h-full items-center px-6">
-        <div className="w-full max-w-5xl mx-auto space-y-6 text-white">
+      <div className="relative z-20 flex h-full items-center">
+        <div className="w-full max-w-5xl mx-auto space-y-6 text-white px-6">
           <h1 className="text-4xl md:text-6xl md:max-w-2xl font-bold leading-tight drop-shadow-lg uppercase">{title}</h1>
 
           <p className="text-lg md:text-xl md:max-w-2xl drop-shadow-md">{description}</p>

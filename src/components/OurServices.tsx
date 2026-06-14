@@ -1,5 +1,7 @@
 import { ourServicesData } from '@/lib/data/our-services.data';
 import { ImageWithFallback } from './ui/image-with-fallback';
+import Link from 'next/link';
+import { ChevronRight } from 'lucide-react';
 
 export default function OurServices() {
   return (
@@ -26,17 +28,29 @@ export default function OurServices() {
                     text-sm px-3 py-1 uppercase tracking-wide shadow-md
                   "
                 >
-                  {c.code}
+                  {c.category}
                 </span>
               </div>
 
               {/* Title */}
-              <h3 className="font-dmsans text-xl font-semibold mb-2 px-4">{c.title}</h3>
+              <Link href={`/layanan/${c.slug}`}>
+                <h3 className="font-dmsans text-xl font-semibold mb-4 px-4 group-hover:underline">
+                  {c.code} - {c.title}
+                </h3>
+              </Link>
 
               {/* Description */}
-              <p className="text-sm leading-relaxed px-4 mb-4">{c.desc}</p>
+              <p className="text-sm leading-relaxed px-4 mb-4 line-clamp-2">{c.desc}</p>
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-center text-center py-8">
+          <Link href="/layanan" className="hover:underline">
+            <span className="flex items-center text-sm font-medium ">
+              selengkapnya <ChevronRight className="w-4 h-4" />
+            </span>
+          </Link>
         </div>
       </div>
     </section>

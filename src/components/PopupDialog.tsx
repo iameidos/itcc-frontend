@@ -34,18 +34,20 @@ export default function PopupDialog() {
 
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg shadow-xl max-w-xl w-full p-2 space-y-2 animate-fadeIn">
+      <div className="bg-white rounded-lg shadow-xl max-w-xl w-full p-6 space-y-2 animate-fadeIn">
         {/* IMAGE */}
         <div className="w-full h-80 relative">
-          <ImageWithFallback src="/images/oilgas.jpg" fallbackSrc="/images/default.png" alt="Welcome" fill className="object-cover rounded-md" />
+          <ImageWithFallback src="/images/itcc-logo-white-back.png" fallbackSrc="/images/default.png" alt="Welcome" fill className="object-cover rounded-md p-10" />
         </div>
 
         {/* TEXT */}
         <h2 className="dark:text-accent-foreground text-lg font-semibold">Selamat Datang!</h2>
-        <p className="dark:text-accent-foreground text-base py-2">ITCC INTERNATIONAL adalah Lembaga Sertifikasi International yang berpusat di United Kingdom – Inggris.</p>
+        <p className="dark:text-accent-foreground text-base py-1 text-justify">
+          ITCC INTERNATIONAL adalah Lembaga Sertifikasi International yang berpusat di United Kingdom – Inggris.
+        </p>
 
         {/* BUTTONS */}
-        <div className="flex items-center gap-1 justify-end">
+        <div className="flex items-center gap-1 justify-end mt-8">
           <Button onClick={handleDontShowAgain} variant="link" className="hover:underline hover:cursor-pointer transition">
             Jangan tampilkan lagi
           </Button>

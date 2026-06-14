@@ -52,7 +52,7 @@ export default function HeroHeader() {
 
               {/* DESKTOP MENU */}
               <div className="hidden lg:block">
-                <ul className="flex gap-6 items-center text-sm">
+                <ul className="flex gap-6 items-center text-sm dark:text-accent-foreground">
                   {menuItems.map((item, index) => {
                     const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
 

@@ -25,9 +25,16 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
 
           {/* Certificate Details */}
           <div className="mx-auto">
-            <div className="relative overflow-hidden items-center justify-items-center bg-white rounded-sm p-6 mb-10 group">
+            <div className="relative overflow-hidden items-center justify-items-center bg-white border rounded-sm p-6 mb-10 group">
               <Image
-                src="/images/logo-itcc-ascb.png"
+                src="/images/itcc-logo-white-back.png"
+                alt=""
+                width={248}
+                height={248}
+                className="object-cover transition-transform rounded-md p-2 duration-500 group-hover:scale-105"
+              />
+              <Image
+                src="/images/ascb-white-back.png"
                 alt=""
                 width={248}
                 height={248}
@@ -37,11 +44,7 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
 
             <div className="flex-row items-center justify-items-center border p-4 lg:p-8 rounded-sm bg-white">
               <div className="w-full text-center font-bold text-xl lg:text-2xl py-1.5 text-white bg-cert rounded-md leading-relaxed uppercase">{info.clientName}</div>
-              <div className="grid md:grid-cols-3 gap-4 w-full justify-items-center py-8 px-2">
-                <div className="text-center text-sm space-y-2.5">
-                  <h1>Scope of Certification :</h1>
-                  <p className="text-base font-bold">{info.scope}</p>
-                </div>
+              <div className="grid md:grid-cols-2 gap-4 w-full justify-items-center py-8 px-2">
                 <div className="text-center text-sm space-y-2.5">
                   <h1>Scheme :</h1>
                   <p className="text-base font-bold">{info.scheme}</p>
@@ -51,9 +54,15 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
                   <p className="text-base font-bold">{info.certificateNumber}</p>
                 </div>
               </div>
-              <div className="text-center text-sm space-y-2.5">
-                <h1>Certificate Number :</h1>
-                <p className="text-base font-bold">{info.locationNumber}</p>
+              <div className="grid gap-4 w-full justify-items-center px-2">
+                <div className="text-center max-w-xl text-sm space-y-2.5">
+                  <h1>Scope of Certification :</h1>
+                  <p className="text-base font-bold">{info.scope}</p>
+                </div>
+                <div className="text-center text-sm space-y-2.5">
+                  <h1>Location :</h1>
+                  <p className="text-base font-bold">{info.locationNumber}</p>
+                </div>
               </div>
             </div>
 
