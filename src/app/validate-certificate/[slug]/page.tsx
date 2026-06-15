@@ -14,9 +14,9 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
   if (!info) return notFound();
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-slate-100">
-      <section className="pt-10 md:pt-20 fade-in rounded-md">
-        <div className="max-w-4xl lg:max-w-6xl mx-auto px-6">
+    <div className="w-full flex items-center justify-center bg-slate-100">
+      <section className="pt-10 md:pt-20 fade-in rounded-md py-6">
+        <div className="w-full p-6 rounded-md bg-slate-300 shadow-sm">
           {/* Back Button */}
           <Link href="/validate-certificate" className="inline-flex items-center text-xs text-muted-foreground hover:underline transition mb-6">
             <ChevronLeft size={14} />
@@ -24,26 +24,28 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
           </Link>
 
           {/* Certificate Details */}
-          <div className="mx-auto">
-            <div className="relative overflow-hidden items-center justify-items-center bg-white border rounded-sm p-6 mb-10 group">
+          <div className="grid">
+            <div className="relative overflow-hidden items-center justify-items-center bg-white rounded-sm p-6 mb-10 shadow-sm group">
               <Image
                 src="/images/itcc-logo-white-back.png"
                 alt=""
                 width={248}
                 height={248}
-                className="object-cover transition-transform rounded-md p-2 duration-500 group-hover:scale-105"
+                className="object-cover transition-transform rounded-md p-2 duration-300 group-hover:scale-105"
               />
               <Image
                 src="/images/ascb-white-back.png"
                 alt=""
                 width={248}
                 height={248}
-                className="object-cover transition-transform rounded-md p-2 duration-500 group-hover:scale-105"
+                className="object-cover transition-transform rounded-md p-2 duration-300 group-hover:scale-105"
               />
             </div>
 
-            <div className="flex-row items-center justify-items-center border p-4 lg:p-8 rounded-sm bg-white">
-              <div className="w-full text-center font-bold text-xl lg:text-2xl py-1.5 text-white bg-surv1 rounded-md leading-relaxed uppercase">{info.clientName}</div>
+            <div className="flex-row items-center justify-items-center p-4 lg:p-8 rounded-sm bg-white shadow-sm group">
+              <div className="w-full text-center font-bold text-xl lg:text-2xl py-1.5 text-white bg-surv1 rounded-md leading-relaxed uppercase duration-300 group-hover:scale-105">
+                {info.clientName}
+              </div>
               <div className="grid md:grid-cols-2 gap-4 w-full justify-items-center py-8 px-2">
                 <div className="text-center text-sm space-y-2.5">
                   <h1>Scheme :</h1>
@@ -71,9 +73,11 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
             </div>
 
             {/* Ditampilkan hanya saat Telah Melaksanakan Sertifikasi 1st */}
-            <div className="flex-row items-center justify-items-center border p-4 lg:p-8 rounded-sm bg-white my-8">
+            <div className="flex-row items-center justify-items-center p-4 lg:p-8 rounded-sm bg-white shadow-sm my-8 group">
               <div className="w-full">
-                <div className="text-center py-2.5 text-white font-bold text-sm lg:text-base bg-cert rounded-md mb-4 leading-relaxed uppercase">First Certification</div>
+                <div className="text-center py-2.5 text-white font-bold text-sm lg:text-base bg-cert rounded-md mb-4 duration-300 group-hover:scale-105 leading-relaxed uppercase">
+                  First Certification
+                </div>
                 <div className="grid md:grid-cols-2 justify-center mx-auto items-center">
                   <div className="text-sm h-[48px] bg-surv1 items-center text-white border flex pl-4">
                     <p className="text-sm">Initial Date</p>
@@ -92,9 +96,11 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
             </div>
 
             {/* Ditampilkan hanya saat Telah Melaksanakan Sertifikasi 2nd */}
-            <div className="flex-row items-center justify-items-center border p-4 lg:p-8 rounded-sm bg-white my-8">
+            <div className="flex-row items-center justify-items-center p-4 lg:p-8 rounded-sm bg-white shadow-sm my-8 group">
               <div className="w-full">
-                <div className="text-center py-2.5 text-white font-bold text-sm lg:text-base bg-cert rounded-md mb-4 leading-relaxed uppercase">Second Certification</div>
+                <div className="text-center py-2.5 text-white font-bold text-sm lg:text-base bg-cert rounded-md mb-4 duration-300 group-hover:scale-105 leading-relaxed uppercase">
+                  Second Certification
+                </div>
                 <div className="grid md:grid-cols-2 justify-center mx-auto items-center">
                   <div className="text-sm h-[48px] bg-surv1 items-center text-white border flex pl-4">
                     <p className="text-sm">Initial Date</p>
@@ -112,9 +118,11 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
               </div>
             </div>
 
-            <div className="flex-row items-center justify-items-center border p-4 lg:p-8 rounded-sm bg-white">
+            <div className="flex-row items-center justify-items-center p-4 lg:p-8 rounded-sm shadow-sm bg-white">
               <div className="w-full">
-                <div className="text-center py-2.5 text-white font-bold text-sm lg:text-base bg-surv1 rounded-md mb-4 leading-relaxed uppercase">Certificate Status</div>
+                <div className="text-center py-2.5 text-white font-bold text-sm lg:text-base bg-surv1 rounded-md mb-4 duration-300 hover:scale-105 leading-relaxed uppercase">
+                  Certificate Status
+                </div>
                 <div className="grid md:grid-cols-4 justify-center gap-4 mx-auto border items-center">
                   <div className="text-sm h-[48px] bg-surv1 items-center text-white flex pl-4">
                     <p className="text-sm">Certified Since</p>
@@ -147,7 +155,9 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
               </div>
 
               <div className="w-full mt-8">
-                <div className=" text-center py-2.5 text-white font-bold text-sm lg:text-base bg-surv1 rounded-md mb-4 leading-relaxed uppercase">Surveillance Status</div>
+                <div className=" text-center py-2.5 text-white font-bold text-sm lg:text-base bg-surv1 rounded-md mb-4 duration-300 hover:scale-105 leading-relaxed uppercase">
+                  Surveillance Status
+                </div>
                 <div className="grid md:grid-cols-4 gap-4 w-full border items-center">
                   <div className="text-sm space-y-1.5 h-[48px] bg-surv1 items-center text-white flex pl-4">
                     <p className="text-sm">First Surveillance</p>
@@ -188,7 +198,7 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
             </div>
           </div>
 
-          <Separator className="mb-20" />
+          <Separator className="my-6" />
         </div>
       </section>
     </div>
