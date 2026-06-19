@@ -24,7 +24,7 @@ export default function OurServices() {
                 <span
                   className="
                     absolute top-4 right-0 text-white
-                    bg-linear-to-r from-indigo-700 to-sky-700
+                    bg-linear-to-r from-teal-700 to-sky-700
                     text-sm px-3 py-1 uppercase tracking-wide shadow-md
                   "
                 >

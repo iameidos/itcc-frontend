@@ -42,7 +42,7 @@ export default function PopupDialog() {
 
         {/* TEXT */}
         <h2 className="dark:text-accent-foreground text-lg font-semibold">Selamat Datang!</h2>
-        <p className="dark:text-accent-foreground text-base py-1 text-justify">
+        <p className="dark:text-accent-foreground text-base py-1 text-justify leading-relaxed">
           ITCC INTERNATIONAL adalah Lembaga Sertifikasi International yang berpusat di United Kingdom – Inggris.
         </p>
 
