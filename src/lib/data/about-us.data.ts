@@ -1,6 +1,11 @@
-import { VisionMission } from '@/types/vision-mission.types';
+import { AboutUs } from '@/types/about-us.types';
 
-export const visionMissionData: VisionMission = {
+export const aboutUsData: AboutUs = {
+  profile: {
+    title: 'Profil Perusahaan',
+    firstItems: ['1', '2', '3', '4'],
+    secondtItems: ['Kantor Pusat ITCC INTERNATIONAL LTD', '310 WELLINGBOROUGH ROAD', 'NORTHAMPTON', 'NORTHAMPTONSHIRE', 'NN1 4EP UNITED KINGDOM'],
+  },
   visi: {
     title: 'Visi Perusahaan',
     content: `Menjadi pemimpin dalam solusi teknologi industri yang inovatif,

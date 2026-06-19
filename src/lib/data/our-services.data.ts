@@ -24,7 +24,7 @@ export const ourServicesData: OurServicesItem[] = [
     slug: 'iso-14001-sistem-manajemen-lingkungan',
     title: 'Sistem Manajemen Lingkungan',
     desc: 'ISO 14001 adalah suatu standar tentang sistem manajemen lingkungan yang penerapannya di organisasi dimaksudkan untuk mengendalikan dampak lingkungan sehingga pada akhirnya akan meningkatkan kinerja lingkungan dan meningkatkan efisiensi operasional. Standar ini memberikan kerangka kerja bagi organisasi untuk mengembangkan, menerapkan, memantau dan terus meningkatkan sistem manajemen lingkungan dan pemenuhan peraturan perundang - undangan yang berlaku dan persyaratan lainnya. Dengan disertifikasi ISO 14001, berarti organisasi anda telah mendapatkan sertifikat yang diakui secara global dalam bidang sistem manajemen lingkungan, hal ini membuktikan bahwa organisasi anda telah menerapkan sistem yang tidak hanya mengurangi dampak lingkungan tetapi juga mengurangi biaya dan meningkatkan efisiensi dalam organisasi.',
-    image: '/images/service/service-iso-14001_2.jpg',
+    image: '/images/service/service-iso-14001.jpg',
     date: '',
     category: 'LSSM',
   },

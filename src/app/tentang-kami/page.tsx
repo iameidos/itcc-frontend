@@ -1,9 +1,8 @@
 import CallToAction from '@/components/CallToActions';
-import Certifications from '@/components/OurServices';
 import PageHeader from '@/components/PageHeader';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { visionMissionData } from '@/lib/data/vision-mission.data';
+import { aboutUsData } from '@/lib/data/about-us.data';
 import { CheckCheck } from 'lucide-react';
 import Image from 'next/image';
 
@@ -27,9 +26,9 @@ export default function TentangKamiPage() {
           </div>
 
           {/* Right: Text */}
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Profil Perusahaan</h2>
-            <p className="leading-relaxed mb-4 text-justify">
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold">{aboutUsData.profile.title}</h2>
+            <p className="leading-relaxed text-justify">
               <span className="font-bold">ITCC INTERNATIONAL</span> adalah <span className="font-bold">Lembaga Sertifikasi International</span> yang berpusat di
               <span className="font-bold"> United Kingdom – Inggris.</span> Pelanggan kami tersebar dibeberapa negara didunia dan didukung oleh semua kantor - kantor cabang dan
               perwakilan kami di beberapa negara di dunia.
@@ -38,6 +37,20 @@ export default function TentangKamiPage() {
               <span className="font-bold">ITCC INTERNATIONAL</span> memberikan layanan jasa sertifikasi untuk lingkup penuh: ISO 9001, ISO 37001, ISO 14001, ISO 45001, ISO 22000,
               ISO 27001, ISO 13485, ISO 50001, dan ISO/TS 16949.
             </p>
+            <p className="leading-relaxed text-justify">
+              Kami memiliki Auditor dan Instruktur berpengalaman dan ahli di bidang ISO 9001, ISO 37001, ISO 14001, ISO 45001, ISO 22000, ISO 27001, ISO 13485, dan ISO/TS 16949
+              termasuk program peningkatan mutu dan efisiensi.
+            </p>
+            <p className="leading-relaxed text-justify">ITCC INTERNATIONAL diakreditasi oleh ASCB ( Accreditation Service for Certifying Bodies ).</p>
+
+            <ul className="space-y-3 leading-relaxed">
+              {aboutUsData.profile.secondtItems.map((item, index) => (
+                <li key={index} className="flex gap-2">
+                  <CheckCheck />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -88,9 +101,9 @@ export default function TentangKamiPage() {
             {/* VISI */}
             <TabsContent value="visi">
               <div className="mt-8 p-8 rounded-md shadow-lg border">
-                <h3 className="text-xl font-semibold mb-4">{visionMissionData.visi.title}</h3>
+                <h3 className="text-xl font-semibold mb-4">{aboutUsData.visi.title}</h3>
 
-                <p className="leading-relaxed">{visionMissionData.visi.content}</p>
+                <p className="leading-relaxed">{aboutUsData.visi.content}</p>
               </div>
             </TabsContent>
 
@@ -99,7 +112,7 @@ export default function TentangKamiPage() {
               <div className="mt-8 p-8 rounded-md shadow-lg border">
                 <h3 className="text-xl font-semibold mb-4">Misi Perusahaan</h3>
                 <ul className="space-y-3 leading-relaxed">
-                  {visionMissionData.misi.items.map((item, index) => (
+                  {aboutUsData.misi.items.map((item, index) => (
                     <li key={index} className="flex gap-2">
                       <CheckCheck />
                       {item}
@@ -111,19 +124,6 @@ export default function TentangKamiPage() {
           </Tabs>
         </div>
       </section>
-
-      <Separator className="max-w-5xl mx-auto" />
-
-      {/* Full Screen Image */}
-      {/* <section className="w-full py-20">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-4">Preview Image</h2>
-          <p className="mb-8">Hubungi kami untuk konsultasi atau informasi lebih lanjut.</p>
-          <Image src="/images/about-company.jpg" width="1920" height="1080" alt="Tentang Kami" className="w-full h-full object-cover object-center rounded-md shadow-md" />
-        </div>
-      </section> */}
-
-      <Separator className="max-w-5xl mx-auto" />
 
       <CallToAction />
     </div>
