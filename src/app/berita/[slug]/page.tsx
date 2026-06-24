@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { newsData, type NewsItem } from '@/lib/data/news.data';
+import { newsData } from '@/lib/data/news.data';
+import type { NewsItem } from '@/types/news.types';
 import PageHeader from '@/components/PageHeader';
 import { withFallbackImage } from '@/lib/utils';
 import { ImageWithFallback } from '@/components/ui/image-with-fallback';

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type { NewsItem } from '@/lib/data/news.data';
+import type { NewsItem } from '@/types/news.types';
 import { ImageWithFallback } from '../ui/image-with-fallback';
 
 export function NewsCard({ slug, title, excerpt, date, image }: NewsItem) {
