@@ -3,13 +3,25 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Separator } from '@/components/ui/separator';
 import { ChevronLeft } from 'lucide-react';
-import { certificateData } from '@/lib/data/certificate.data';
 import StatusButton from '@/components/StatusButton';
+import { getCertificate } from '@/lib/certificate';
 
-export default async function ValidateCertificateDetailsPage(props: { params: Promise<{ slug: string }> }) {
+function formatDate(date?: string | null) {
+  if (!date) return '-';
+
+  return new Date(date).toLocaleDateString('id-ID', {
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric',
+  });
+}
+
+export default async function ValidateCertificateDetailsPage(props: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await props.params;
 
-  const info = certificateData.find((item) => item.slug === slug);
+  const info = await getCertificate(slug);
 
   if (!info) return notFound();
 
@@ -17,13 +29,14 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
     <div className="w-full flex items-center justify-center bg-slate-100">
       <section className="pt-10 md:pt-20 fade-in rounded-md py-6">
         <div className="w-full p-6 rounded-md bg-slate-300 shadow-sm">
-          {/* Back Button */}
-          <Link href="/validate-certificate" className="inline-flex items-center text-xs text-muted-foreground hover:underline transition mb-6">
+          <Link
+            href="/validate-certificate"
+            className="inline-flex items-center text-xs text-muted-foreground hover:underline transition mb-6"
+          >
             <ChevronLeft size={14} />
             Kembali ke Validasi Sertifikat
           </Link>
 
-          {/* Certificate Details */}
           <div className="grid">
             <div className="relative overflow-hidden items-center justify-items-center bg-white rounded-sm p-6 mb-10 shadow-sm group">
               <Image
@@ -33,6 +46,7 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
                 height={248}
                 className="object-cover transition-transform rounded-md p-2 duration-300 group-hover:scale-105"
               />
+
               <Image
                 src="/images/ascb-white-back.png"
                 alt=""
@@ -44,75 +58,74 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
 
             <div className="flex-row items-center justify-items-center p-4 lg:p-8 rounded-sm bg-white shadow-sm group">
               <div className="w-full text-center font-bold text-xl lg:text-2xl py-1.5 text-white bg-surv1 rounded-md leading-relaxed uppercase duration-300 group-hover:scale-105">
-                {info.clientName}
+                {info.perusahaan?.nama_perusahaan ?? '-'}
               </div>
+
               <div className="grid md:grid-cols-2 gap-4 w-full justify-items-center py-8 px-2">
                 <div className="text-center text-sm space-y-2.5">
                   <h1>Scheme :</h1>
-                  <p className="text-base font-bold">{info.scheme}</p>
+                  <p className="text-base font-bold">
+                    {info.iso?.jenis_iso} : {info.iso?.tahun_iso}
+                  </p>
                 </div>
+
                 <div className="text-center text-sm space-y-2.5">
                   <h1>Certificate Number :</h1>
-                  <p className="text-base font-bold">{info.certificateNumber}</p>
+                  <p className="text-base font-bold">
+                    {info.nomor_sertifikat}
+                  </p>
                 </div>
               </div>
+
               <div className="grid gap-4 w-full justify-items-center px-2">
                 <div className="text-center max-w-xl text-sm space-y-2.5">
                   <h1>Scope of Certification :</h1>
-                  <p className="text-base font-bold">{info.scope}</p>
+                  <p className="text-base font-bold">
+                    {info.keterangan}
+                  </p>
                 </div>
+
                 <div className="text-center text-sm space-y-2.5">
                   <h1>Location :</h1>
-                  <p className="text-base font-bold">{info.address}</p>
+                  <p className="text-base font-bold">
+                    {info.perusahaan?.alamat_perusahaan ?? '-'}
+                  </p>
                 </div>
+
                 <div className="text-center text-sm space-y-2.5">
-                  <h1>Location :</h1>
-                  <p className="text-base font-bold">{info.locationNumber}</p>
+                  <h1>Location Number :</h1>
+                  <p className="text-base font-bold">
+                    {info.id_perusahaan}
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Ditampilkan hanya saat Telah Melaksanakan Sertifikasi 1st */}
             <div className="flex-row items-center justify-items-center p-4 lg:p-8 rounded-sm bg-white shadow-sm my-8 group">
               <div className="w-full">
                 <div className="text-center py-2.5 text-white font-bold text-sm lg:text-base bg-cert rounded-md mb-4 duration-300 group-hover:scale-105 leading-relaxed uppercase">
-                  First Certification
+                  Certification
                 </div>
-                <div className="grid md:grid-cols-2 justify-center mx-auto items-center">
-                  <div className="text-sm h-[48px] bg-surv1 items-center text-white border flex pl-4">
-                    <p className="text-sm">Initial Date</p>
-                  </div>
-                  <div className="items-center h-[48px] border flex pl-4">
-                    <p className="text-sm font-bold">{info.initialCertDate}</p>
-                  </div>
-                  <div className="text-sm h-[48px] bg-surv1 items-center text-white border flex pl-4">
-                    <p className="text-sm">Expired Date</p>
-                  </div>
-                  <div className="items-center h-[48px] border flex pl-4">
-                    <p className="text-sm font-bold">{info.endCertDate}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            {/* Ditampilkan hanya saat Telah Melaksanakan Sertifikasi 2nd */}
-            <div className="flex-row items-center justify-items-center p-4 lg:p-8 rounded-sm bg-white shadow-sm my-8 group">
-              <div className="w-full">
-                <div className="text-center py-2.5 text-white font-bold text-sm lg:text-base bg-cert rounded-md mb-4 duration-300 group-hover:scale-105 leading-relaxed uppercase">
-                  Second Certification
-                </div>
                 <div className="grid md:grid-cols-2 justify-center mx-auto items-center">
                   <div className="text-sm h-[48px] bg-surv1 items-center text-white border flex pl-4">
                     <p className="text-sm">Initial Date</p>
                   </div>
+
                   <div className="items-center h-[48px] border flex pl-4">
-                    <p className="text-sm font-bold">{info.initialCertDate}</p>
+                    <p className="text-sm font-bold">
+                      {formatDate(info.tanggal_sertifikat)}
+                    </p>
                   </div>
+
                   <div className="text-sm h-[48px] bg-surv1 items-center text-white border flex pl-4">
                     <p className="text-sm">Expired Date</p>
                   </div>
+
                   <div className="items-center h-[48px] border flex pl-4">
-                    <p className="text-sm font-bold">{info.endCertDate}</p>
+                    <p className="text-sm font-bold">
+                      {formatDate(info.tanggal_berakhir_sertifikat)}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -123,75 +136,108 @@ export default async function ValidateCertificateDetailsPage(props: { params: Pr
                 <div className="text-center py-2.5 text-white font-bold text-sm lg:text-base bg-surv1 rounded-md mb-4 duration-300 hover:scale-105 leading-relaxed uppercase">
                   Certificate Status
                 </div>
+
                 <div className="grid md:grid-cols-4 justify-center gap-4 mx-auto border items-center">
                   <div className="text-sm h-[48px] bg-surv1 items-center text-white flex pl-4">
                     <p className="text-sm">Certified Since</p>
                   </div>
-                  <div className="">
-                    <p className="text-sm font-bold">Friday, 07 February 2025</p>
+
+                  <div>
+                    <p className="text-sm font-bold">
+                      {formatDate(info.tanggal_sertifikat)}
+                    </p>
                   </div>
-                  <div className="text-sm space-y-1.5 h-[48px] bg-surv1 items-center text-white flex pl-4">
+
+                  <div className="text-sm h-[48px] bg-surv1 items-center text-white flex pl-4">
                     <p className="text-sm">Certificate Status</p>
                   </div>
+
                   <div className="items-center">
-                    <StatusButton status="active" />
+                    <StatusButton
+                      status={
+                        info.status?.toLowerCase() === 'active'
+                          ? 'active'
+                          : 'withdrawn'
+                      }
+                    />
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-4 gap-4 w-full border items-center">
-                  <div className="text-sm space-y-1.5 h-[48px] bg-surv1 items-center text-white flex pl-4">
+                  <div className="text-sm h-[48px] bg-surv1 items-center text-white flex pl-4">
                     <p className="text-sm">Valid From</p>
                   </div>
-                  <div className="text-sm space-y-1.5">
-                    <p className="text-sm font-bold">{info.initialCertDate}</p>
+
+                  <div>
+                    <p className="text-sm font-bold">
+                      {formatDate(info.tanggal_sertifikat)}
+                    </p>
                   </div>
-                  <div className="text-sm space-y-1.5 h-[48px] bg-surv1 items-center text-white flex pl-4">
+
+                  <div className="text-sm h-[48px] bg-surv1 items-center text-white flex pl-4">
                     <p className="text-sm">Expired Date</p>
                   </div>
-                  <div className="items-center flex">
-                    <p className="text-sm font-bold">{info.endCertDate}</p>
+
+                  <div>
+                    <p className="text-sm font-bold">
+                      {formatDate(info.tanggal_berakhir_sertifikat)}
+                    </p>
                   </div>
                 </div>
               </div>
 
               <div className="w-full mt-8">
-                <div className=" text-center py-2.5 text-white font-bold text-sm lg:text-base bg-surv1 rounded-md mb-4 duration-300 hover:scale-105 leading-relaxed uppercase">
+                <div className="text-center py-2.5 text-white font-bold text-sm lg:text-base bg-surv1 rounded-md mb-4 duration-300 hover:scale-105 leading-relaxed uppercase">
                   Surveillance Status
                 </div>
+
                 <div className="grid md:grid-cols-4 gap-4 w-full border items-center">
-                  <div className="text-sm space-y-1.5 h-[48px] bg-surv1 items-center text-white flex pl-4">
+                  <div className="text-sm h-[48px] bg-surv1 items-center text-white flex pl-4">
                     <p className="text-sm">First Surveillance</p>
                   </div>
-                  <div className="text-sm space-y-1.5">
-                    <p className="text-sm font-bold">{info.surv1Date}</p>
+
+                  <div>
+                    <p className="text-sm font-bold">
+                      {formatDate(info.tanggal_survei_1)}
+                    </p>
                   </div>
-                  <div className="text-sm space-y-1.5 h-[48px] bg-surv1 items-center text-white flex pl-4">
+
+                  <div className="text-sm h-[48px] bg-surv1 items-center text-white flex pl-4">
                     <p className="text-sm">First Surveillance Status</p>
                   </div>
+
                   <div className="items-center">
                     <StatusButton status="conducted" />
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-4 gap-4 w-full border items-center">
-                  <div className="text-sm space-y-1.5 h-[48px] bg-surv1 items-center text-white flex pl-4">
+                  <div className="text-sm h-[48px] bg-surv1 items-center text-white flex pl-4">
                     <p className="text-sm">Second Surveillance</p>
                   </div>
-                  <div className="text-sm space-y-1.5">
-                    <p className="text-sm font-bold">{info.surv2Date}</p>
+
+                  <div>
+                    <p className="text-sm font-bold">
+                      {formatDate(info.tanggal_survei_2)}
+                    </p>
                   </div>
-                  <div className="text-sm space-y-1.5 h-[48px] bg-surv1 items-center text-white flex pl-4">
+
+                  <div className="text-sm h-[48px] bg-surv1 items-center text-white flex pl-4">
                     <p className="text-sm">Second Surveillance Status</p>
                   </div>
+
                   <div className="items-center">
-                    <StatusButton status="withdrawn" />
+                    <StatusButton status="conducted" />
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="flex-row py-6 justify-items-center">
-              <Link href="/validate-certificate" className="flex items-center text-xs text-muted-foreground hover:underline transition">
+              <Link
+                href="/validate-certificate"
+                className="flex items-center text-xs text-muted-foreground hover:underline transition"
+              >
                 <ChevronLeft size={14} />
                 Back to home
               </Link>
